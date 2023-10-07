@@ -1,5 +1,4 @@
 /* Settings */
-/* CEST UN TESTEUX */
 
 @import url('https://fonts.googleapis.com/css2?family=Gelasio:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
@@ -24,7 +23,7 @@ html {
     height: 100%;
     
 }
-/* Header */
+ /* Header */
  
 #flex-header{
     display: flex;
@@ -222,7 +221,7 @@ footer{
     border-radius: 10px;
 
     /* Responsive */
- }
+}
 
 @media all and (max-width:1603px){
     .container{
@@ -231,7 +230,7 @@ footer{
     }
         
     }
-     .tarte-presentation img{
+         .tarte-presentation img{
         width:99%;
         border: 3px solid white;
         border-radius: 10px;
@@ -322,3 +321,25 @@ footer{
         background-image: url(images/mega-pop.png);
         background-size: cover;}
 }
+@media all and (max-width:366px){
+    #flex-header p{
+        display: none;
+}
+.gold {
+    margin: auto;
+}
+.gold a{
+    padding: 0px 38px;
+}
+.nav-pink {
+    margin: auto;
+    display: flex;
+}
+.nav-pink a{
+    padding: 0px 30px; 
+}
+}
+   
+
+
+
