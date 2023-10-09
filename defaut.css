@@ -219,10 +219,12 @@ footer{
     width: 100%;
     border: 3px solid white;
     border-radius: 10px;
-
-    /* Responsive */
+}
+.tarte-presentation{
+padding-bottom: 40px;
 }
 
+  /* Responsive */
 @media all and (max-width:1603px){
     .container{
         width: auto;
