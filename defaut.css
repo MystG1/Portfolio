@@ -35,8 +35,12 @@ html {
     font-size: 20px;
     padding: 30px 0;
     text-shadow: 2px 2px 2px #000000;
-    
 }
+#flex-header p{
+    margin-top: auto;
+    padding-left: 5px;
+}
+ 
 
 .gold a{
     text-decoration: none;
@@ -51,7 +55,12 @@ html {
     padding: 0px 10px;
     text-align: center;
 }
-
+.nav-gold a{
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 0px 10px;
+    text-align: center;
+}
 .gold a:hover{
  margin-left: -4px;
  box-shadow: inset 0px 0px 10px 2px black;
@@ -68,6 +77,15 @@ html {
     border-radius: 10px;
     background-color: #ef9595;
     color: #f8c8ae;
+    text-shadow: 2px 1px 1px #000000;
+}
+.nav-gold a:hover{
+    margin-left: -4px;
+    box-shadow: inset 0px 0px 3px 2px black;
+    border: 2px solid rgb(150, 114, 23);
+    border-radius: 10px;
+    background-color: rgb(27, 26, 26);
+    color: goldenrod;
     text-shadow: 2px 1px 1px #000000;
 }
 /* centre du site */
@@ -329,6 +347,7 @@ padding-bottom: 40px;
 }
 .gold {
     margin: auto;
+    display: flex;
 }
 .gold a{
     padding: 0px 38px;
@@ -340,8 +359,15 @@ padding-bottom: 40px;
 .nav-pink a{
     padding: 0px 30px; 
 }
+
+.nav-gold {
+    margin: auto;
+    display: flex;
 }
-   
+.nav-gold a{
+    padding: 0px 30px;
+}
+}
 
 
 
