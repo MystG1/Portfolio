@@ -1,0 +1,112 @@
+
+.container {
+    width: 1600px;
+    margin: 0 auto;
+
+}
+
+.container-contact {
+    width: 500px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    height: 100%;
+    min-width: 267px;
+
+}
+
+/* Header */
+
+#flex-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: auto;
+    padding: 30px 0;
+}
+
+#flex-header p {
+    margin-top: auto;
+    padding-left: 5px;
+}
+
+/* centre du site */
+#flex-section {
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Les éléments du Portfolio */
+#grid-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: baseline;
+}
+.mid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 25px;
+    row-gap: 25px;
+    padding-bottom: 30px;
+}
+
+.mid a {
+    padding: 50px 40px;
+}
+
+/* Footer */
+footer {
+
+}
+/* Style contact.html */
+.body-contact{
+    display: flex;
+}
+#contact{
+    padding: 0px 10px;
+}
+#contact p {
+    margin: 0;
+    padding: 0px 20px 20px 20px;
+    padding-bottom: 20px;
+}
+
+.contact {
+    padding-top: 7px;
+    padding-bottom: 50px;
+}
+.contact input {
+    padding: 10px;
+}
+
+.prenom, .nom, .mail{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 10px;
+    padding: 20px;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+section span{
+    color: red;
+    padding-left: 135px;
+
+}
