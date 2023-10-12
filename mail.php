@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $contenu .= "Message:\n$message";
 
     // Adresse e-mail où vous souhaitez recevoir les données
-    $destinataire = "contacts@gaetan-ferron.com";
+    $destinataire = "contact@gaetan-ferron.com";
 
     // Entêtes de l'e-mail
     $entetes = "From: $email\r\n";
