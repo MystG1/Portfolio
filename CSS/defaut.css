@@ -30,6 +30,9 @@ body {
 
 }
 .gold a:hover {
+    transition: 0.4s;
+    font-size: 23px;
+    padding-top: 2px;
     margin-left: -4px;
     box-shadow: inset 0px 0px 10px 2px black;
     border: 1px solid rgb(143, 138, 138);
@@ -46,6 +49,9 @@ body {
     text-align: center;
 }
 .nav-gold a:hover {
+    transition: 0.4s;
+    font-size: 23px;
+    padding-top: 2px;
     margin-left: -4px;
     box-shadow: inset 0px 0px 3px 2px black;
     border: 2px solid rgb(150, 114, 23);
@@ -99,6 +105,14 @@ body {
     text-shadow: 1px 3px 2px black;
 }
 
+.mid a:hover{
+    transition: 0.15s;
+    box-shadow: inset 0px 0px 3px 2px black;
+    border: 6px solid rgb(150, 114, 23);
+    border-radius: 10px;
+    opacity: 0.9;
+    
+}
 
 .mid a:nth-of-type(1) {
     background-image: url(../images/portfolio-mini.png);
