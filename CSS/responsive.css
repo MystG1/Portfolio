@@ -26,7 +26,7 @@
         grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 2;
-        min-width: 262px;
+        
     }
 
     .mid a:nth-of-type(2) {
@@ -34,7 +34,7 @@
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 2;
-        min-width: 250px;
+        
     }
 
     .mid a:nth-of-type(3) {
@@ -63,8 +63,8 @@
 }
 
 @media all and (max-width:766px) {
-    .mid {
 
+    .mid {
         grid-template-columns: 1fr;
     }
 
@@ -97,7 +97,7 @@
     }
 }
 @media all and (max-width:564px){
-    .container-contact{
+    .encadrement{
         width: auto;
        margin: 0; 
     }
@@ -110,6 +110,7 @@
     #flex-header p {
         display: none;
     }
+   
     .prenom, .nom, .mail{
         display: flex;
         flex-direction: column;
