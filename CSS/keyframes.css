@@ -216,6 +216,16 @@
       opacity: 1;
     }
   }
+  @-webkit-keyframes border-move{
+    0%{
+      background-color: black;
+      background-position: right;
+      
+    }100%{
+      background-color: rgb(196, 114, 8);
+      background-position: left;
+    }
+  }
   @keyframes border-move{
     0%{
       background-color: black;
@@ -236,5 +246,6 @@
     animation : fondu 4s;
   }
   .tarte-presentation img{
+    -webkit-animation: border-move 5s infinite alternate;
     animation: border-move 5s infinite alternate;
   }
