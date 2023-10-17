@@ -30,10 +30,9 @@ body {
 
 }
 .gold a:hover {
+    margin: -3px;
     transition: 0.4s;
-    font-size: 23px;
-    padding-top: 2px;
-    margin-left: -4px;
+    font-size: 22px;
     box-shadow: inset 0px 0px 10px 2px black;
     border: 1px solid rgb(143, 138, 138);
     border-radius: 10px;
@@ -49,10 +48,9 @@ body {
     text-align: center;
 }
 .nav-gold a:hover {
+    margin: -3px;
     transition: 0.4s;
-    font-size: 23px;
-    padding-top: 2px;
-    margin-left: -4px;
+    font-size: 22px;
     box-shadow: inset 0px 0px 3px 2px black;
     border: 2px solid rgb(150, 114, 23);
     border-radius: 10px;
@@ -106,6 +104,8 @@ body {
 }
 
 .mid a:hover{
+    margin : -30px 0;
+    margin-top: -30px;
     transition: 0.15s;
     box-shadow: inset 0px 0px 3px 2px black;
     border: 6px solid rgb(150, 114, 23);
@@ -183,6 +183,11 @@ footer {
 }
 
 /* Style portfolio html */
+.tarte-presentation img {
+    width: 99%;
+    border-radius: 10px;
+    padding: 3px;
+}
 .background{
     background-image: url(../images/contact-background.png);
     background-size: cover;

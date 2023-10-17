@@ -10,11 +10,7 @@
         background-size: contain;
     }
 }
-.tarte-presentation img {
-    width: 99%;
-    border: 3px solid white;
-    border-radius: 10px;
-}
+
 
 @media all and (max-width:1127px) {
     .mid {
