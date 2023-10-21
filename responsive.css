@@ -32,6 +32,16 @@
             text-align: center;
         }
     }
+    @media all and (max-width:600px){
+        .form{
+            
+            width: auto;
+        }
+        .background{
+            background-image: url(images/contact-fond.png);
+            background-size: cover;
+        }
+    }
     @media all and (max-width:540px){
         .creation a{
             width: 300px;
