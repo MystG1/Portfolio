@@ -174,7 +174,7 @@ footer{
     flex-grow: 1;
   }
 /* Fin Portfolio.html */
-.form {
+.formulaire {
     background-color: rgba(0, 0, 0, 0.6);
     margin-top: auto;
     margin-left: auto;
@@ -188,18 +188,18 @@ footer{
     font-family:Noto Sans NKo Unjoined;
     flex-grow: 1;
 }
-.form form{
+.formulaire form{
     display: grid;
     row-gap: 20px;
 }
-.form form input{
+.formulaire form input{
     resize: vertical;
     height: 27px;
     border: 1px solid rgb(104,79,16);
     font-family: gelasio;
     background-color: whitesmoke;
 }
-.form form input:nth-of-type(4){
+.formulaire form input:nth-of-type(4){
     background-color: black;
     color: white;
     width: 120px;
@@ -212,7 +212,7 @@ footer{
     font-family: Inter;
     font-weight: bolder;
 }
-.form form input:nth-of-type(4):hover{
+.formulaire form input:nth-of-type(4):hover{
     transition: 0.1s;
     width: 115px;
     height: 45px;
