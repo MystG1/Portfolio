@@ -235,17 +235,17 @@
       background-color: rgb(196, 114, 8);
       background-position: left;
     }
-    
   }
   
-  .gauche-presentation h1{
+  .left-index h1{
     animation : flicker 1.5s;
     -webkit-animation: flicker 1.5s;
   }
-  .gauche-presentation p{
+  .left-index p{
     animation : fondu 4s;
   }
-  .tarte-presentation img{
+  .img-portfolio img{
+    padding: 2px;
     -webkit-animation: border-move 5s infinite alternate;
     animation: border-move 5s infinite alternate;
   }

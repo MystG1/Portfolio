@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+NKo+Unjoined:wght@600&display=swap');
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0; padding: 0;
+    background-color: black;
+    color: whitesmoke;
+    display: table;
+}
+.container{
+    width: 1600px;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Gelasio;
+    font-size: 20px;
+    padding: 10px;
+} 
+header h1{
+    font-weight: 100;
+    font-size: 20px;
+}
+header a{
+    text-decoration: none;
+    padding: 3px 20px;
+    color: whitesmoke;
+    font-size: 20px;
+    border-radius: 10px;
+}
+header a:nth-of-type(1):hover{
+    margin-left: -2px;
+    margin-right: 2px;
+    font-size: 18px;
+    transition: 0.3s;
+    opacity: 0.6;
+}
+header a:nth-of-type(2):hover{
+    margin-left: -2px;
+    margin-right: 12px;
+    font-size: 18px;
+    transition: 0.3s;
+    opacity: 0.6;
+}
+
+/* Fin Header */
+.main-index{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.left-index h1{
+    font-family: Gelasio;
+    font-size: 60px;
+    margin: auto;
+}
+.left-index p{
+    font-family: Inter;
+    text-align: left;
+    font-size: 16px;
+}
+/* Fin section Main-index */
+
+.creation{
+    display: flex;
+    text-align: center;
+    color: black;
+    font-family:  Noto Sans NKo Unjoined;
+    background-color: white;
+    padding: 0px 10px;
+}
+.creation h1{
+    margin-bottom: auto;
+    font-size: 30px;
+    letter-spacing: -1px;
+}
+
+.creation p{
+    font-family: Inter;
+    font-weight: bold;
+}
+.creation nav{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 25px;
+    row-gap: 25px;
+    padding-bottom: 30px;
+}
+.creation a {
+    text-decoration: none;
+    text-align: left;
+    font-family: Inter;
+    font-weight: bolder;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 30px;
+    padding: 50px 40px;
+    border-radius: 10px;
+    color: whitesmoke;
+    text-shadow: 1px 2px 6px black ;
+}
+.creation a:nth-of-type(1){
+    background-image: url(images/portfolio-mini.png);
+}
+.creation a:nth-of-type(2){
+    background-image: url(images/mega-pop.png);
+}
+.creation a:nth-of-type(3){
+    background-image: url(images/pac-man.png);
+}
+.creation a:nth-of-type(4){
+    background-image: url(images/rodeo-pump.png);
+}
+.creation a:hover{
+    margin : -30px 0;
+    transition: 0.15s;
+    box-shadow: inset 0px 0px 3px 2px black;
+    border: 4px solid rgb(150, 114, 23);
+    border-radius: 10px;
+    opacity: 0.9;
+}
+/* Fin creation */
+
+.contact{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.contact h1{
+    font-family:  Noto Sans NKo Unjoined;
+}
+.contact p{
+    font-family: Inter;
+    padding-bottom: 20px;
+    font-weight: 600 ;
+}
+.contact a{
+    text-decoration: none;
+    color: black;
+    font-family: Inter;
+    font-weight: bolder;
+    padding: 20px 40px;
+    background-color: white;
+}
+footer{
+    display:table-row;
+    position: relative;
+    text-align: center;
+    font-family: Inter;
+    font-weight: bold;
+    padding: 20px;
+}
+  /*Fin index.html  */
+  .img-portfolio{
+    text-align: right;
+    padding-right: 15px;
+  }
+  .img-portfolio img{
+    width: 89%;
+  }
+  .portfolio-background{
+    background-image: url(images/contact-background.png);
+    background-size: cover;
+  }
