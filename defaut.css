@@ -219,3 +219,121 @@ footer{
     font-size: -2px;
     margin-top: 22px;
 }
+/* Fin contact.html */
+
+.background2{
+    background-image: url(images/citations.background.png);
+    background-size: cover;
+    flex-grow: 1;
+}
+.citations {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: auto;
+    text-align: center;
+    border: 3px solid rgb(104, 79, 16);
+    border-radius: 10px;
+    font-family:Noto Sans NKo Unjoined;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 50px;
+    
+}
+.citations p{
+    border: 3px solid rgb(104,79,16);
+    flex-grow: 1;
+    border-radius: 8px;
+    white-space: normal;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.citations h2{
+    margin: auto;
+}
+.citations button{
+    background-color: black;
+    color: white;
+    width: 120px;
+    height: 50px;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: auto;
+    border: 2px solid rgb(104,79,16);
+    border-radius: 5px;
+    font-family: Inter;
+    font-weight: bolder;
+}
+.citations button:hover{
+    transition: 0.1s;
+    width: 115px;
+    height: 45px;
+    font-size: -2px;
+    margin-top: 22px;
+}
+/* Fin citations.html */
+.background3{
+    background-image: url(images/justePrix.background.png);
+    background-size: cover;
+    flex-grow: 1;
+}
+.justePrix {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: auto;
+    text-align: center;
+    border: 3px solid rgb(104, 79, 16);
+    border-radius: 10px;
+    font-family:Noto Sans NKo Unjoined;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 50px;
+}
+.justePrix input{
+    border: 2px solid rgb(104, 79, 16);
+    border-radius:5px;
+    padding: 10px;
+    width: 350px;
+    font-size: 20px;
+}
+
+.justePrix button{
+    background-color: black;
+    color: white;
+    width: 120px;
+    height: 50px;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: auto;
+    border: 2px solid rgb(104,79,16);
+    border-radius: 5px;
+    font-family: Inter;
+    font-weight: bolder;
+}
+.justePrix button:hover{
+    transition: 0.1s;
+    width: 115px;
+    height: 45px;
+    font-size: -2px;
+    margin-top: 22px;
+}
+.instruction {
+    padding: 15px;
+    margin: 10px 0;
+  }
+  
+  .plus {
+    background-color: #f67280;
+  }
+  
+  .moins {
+    background-color: #ffa372;
+  }
+  
+  .fini {
+    background-color : #0c9463;
+  }
+  

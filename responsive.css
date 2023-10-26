@@ -41,6 +41,14 @@
             background-image: url(images/contact-fond.png);
             background-size: cover;
         }
+        .background2{
+            background-image: url(images/citations.fond.png);
+            background-size: cover;
+        }
+        .background3{
+            background-image: url(images/justePrix.fond.png);
+            background-size: cover;
+        }
     }
     @media all and (max-width:540px){
         .creation a{
@@ -53,5 +61,14 @@
             display: flex;
             width: 100%;
             justify-content: space-between;
+        }
+        .citations{
+            width: auto;
+        }
+        .justePrix{
+            width: auto;
+        }
+        .justePrix input{
+            width: auto;
         }
     }
