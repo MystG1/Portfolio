@@ -38,7 +38,7 @@ function start() {
                 if (mot===motSansAccents){
                     $("header").css("background-color", "green");
                     $(".clavier").css("display", "none");
-                    $(".rejouer").css("display", "auto");
+                    $(".rejouer").css("display", "flex");
                     $(".leMot").text("Tu as gagné ! Le mot était '" + motSansAccents + "'");
 
                 }else{
@@ -53,6 +53,8 @@ function start() {
                 }}, 350);
                 
             });
+            
+            
             // On stock toutes les touches du clavier dans une variable "boutonsClaviers"
             let boutonsClavier = document.querySelectorAll('.clavier button');
 
@@ -65,7 +67,7 @@ function start() {
                     bouton.style.opacity=0;
                     bouton.disabled=true;
                    
-
+                    
                     // Si le mot a deviner contient la valeur de la variable "Guess"
                     if (motSansAccents.includes(guess)) {
 
@@ -91,6 +93,8 @@ function start() {
                         $(".click").html("<audio class='click' src='sons/outch.mp3' autoplay></audio>");
 
                     }
+                    
+
                     // On actualise le mot cacher pour que les lettres découverte apparraissent
                     $(".leMot").text(leMotCacher.join(""));
 
@@ -110,7 +114,7 @@ function start() {
                     if (leMotCacher.join("") === motSansAccents) {
                         $("header").css("background-color", "green");
                         $(".clavier").css("display", "none");
-                        $(".rejouer").css("display", "auto");
+                        $(".rejouer").css("display", "flex");
                         $(".leMot").text("Tu as gagné ! Le mot était '" + motSansAccents + "'");
 
                     }
