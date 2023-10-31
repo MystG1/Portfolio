@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <link rel="stylesheet" href="css/pendu.css">
+    <link rel="stylesheet" href="css/responsive pendu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu du pendu</title>
+</head>
+<body>
+    <audio class="main" src="sons/main.mp3"autoplay loop></audio>
+    <div class="click"></div>
+    <div class="start">Appuyez ici pour commencer le jeu</div>
+    <div class="container">
+        <header>
+            <button class="deviner">tu a deviné le mot ? </button>
+            <a class="menu" href="index.html">Menu</a>
+            <h1 class="leMot">Mot a deviner</h1>
+            <p>statut du pendu : <b class="pendu"></b> </p>
+        </header>
+
+        <section>
+            <img class="maj" src="images/error/error0.png" alt="noError">
+        </section>
+    </div>
+    <div class="container">
+        <section class="clavier">
+            <button class="a">A</button>
+            <button class="z">Z</button>
+            <button class="e">E</button>
+            <button class="r">R</button>
+            <button class="t">T</button>
+            <button class="y">Y</button>
+            <button class="u">U</button>
+            <button class="i">I</button>
+            <button class="o">O</button>
+            <button class="p">P</button><br>
+            <button class="q">Q</button>
+            <button class="s">S</button>
+            <button class="d">D</button>
+            <button class="f">F</button>
+            <button class="g">G</button>
+            <button class="h">H</button>
+            <button class="j">J</button>
+            <button class="k">K</button>
+            <button class="l">L</button>
+            <button class="m">M</button><br>
+            <button class="w">W</button>
+            <button class="x">X</button>
+            <button class="c">C</button>
+            <button class="v">V</button>
+            <button class="b">B</button>
+            <button class="n">N</button>
+        </section>
+        <section>
+            <button class="rejouer">Appuyez içi pour rejouer</button>
+        </section>
+    </div>
+    <script src="pendu.js"></script>
+</body>
+
+</html>
