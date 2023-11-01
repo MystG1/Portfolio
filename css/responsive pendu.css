@@ -29,7 +29,7 @@
         padding: 17px;
     } 
     .start{
-        margin-top: 50%;
+        margin:50% 0;
     }
 }
 @media all and (max-width:560px){
