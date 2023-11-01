@@ -155,7 +155,5 @@ section img {
 
 .clavier button:hover {
     transition: 0.1s;
-    width: 78px;
-    height: 78px;
     box-shadow: inset 0px 0px 4px 2px black;
 }
