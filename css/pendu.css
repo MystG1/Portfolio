@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+body{
+    min-width: 509px;
+}
 
 .container {
     display: none;

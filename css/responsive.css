@@ -38,15 +38,15 @@
             width: auto;
         }
         .background{
-            background-image: url(images/contact-fond.png);
+            background-image: url(../images/contact-fond.png);
             background-size: cover;
         }
         .background2{
-            background-image: url(images/citations.fond.png);
+            background-image: url(../images/citations.fond.png);
             background-size: cover;
         }
         .background3{
-            background-image: url(images/justePrix.fond.png);
+            background-image: url(../images/justePrix.fond.png);
             background-size: cover;
         }
     }
