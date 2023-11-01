@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 body{
-    min-width: 509px;
+    min-width: 336px;
 }
-
 .container {
     display: none;
     width: auto;
@@ -129,6 +128,7 @@ section img {
     display: inline-block;
     text-align: center;
     white-space: nowrap;
+   
 
     background-color: rgba(46, 82, 39, 0.3);
     background-size: cover;
