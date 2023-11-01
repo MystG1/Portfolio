@@ -11,8 +11,7 @@ body{
 }
 
 /* "Appuyez ici pour commencer le jeux" "Appuyez ici pour rejouer */
-.start,
-.rejouer {
+.start, .rejouer {
     text-align: center;
     margin-top: 20%;
     padding: 50px;
@@ -68,9 +67,10 @@ body{
 
 /* html */
 html {
+    background-color: #160f0a;
     background-image: url(../images/background.png);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat:no-repeat;
 }
 
 body {

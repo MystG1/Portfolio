@@ -28,6 +28,9 @@
     header h1{
         padding: 17px;
     } 
+    .start{
+        margin-top: 50%;
+    }
 }
 @media all and (max-width:560px){
     .clavier button{
