@@ -24,8 +24,6 @@ body{
 }
 
 .mute, .demute{
-    margin-left: auto;
-    margin-right: 7px;
     padding: 5px 15px;
     font-family: Amatic SC;
     font-size: 20px;
@@ -37,7 +35,6 @@ body{
     transition: 0.3s;
     background-color: brown;
     box-shadow: inset 0px 0px 20px black;
-    font-size: 27px;
 }
 .start:hover, .rejouer:hover {
     transition: 0.3s;
@@ -67,8 +64,6 @@ body{
 }
 
 .menu {
-    margin-left: 30px;
-    margin-right: -30px;
     font-family: Amatic SC;
     font-size: 30px;
     text-decoration: none;
@@ -93,7 +88,12 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
+.top{
+    width: 1463px;
+    display: flex;
+    justify-content: space-between;
+    
+}
 header {
     display: flex;
     text-align: center;
@@ -131,16 +131,16 @@ header h1 {
 }
 
 /* L'image du pendu */
-section img {
+.imageCentrale img {
     border: 3px solid #160f0a;
     width: 100%;
-
 }
 
 /* Le clavier */
 .clavier {
     padding: 10px;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
     text-align: center;
     white-space: nowrap;
    

@@ -1,4 +1,8 @@
-
+@media all and (max-width:1496px){
+    .top{
+        width: 99%;
+    }
+}
 @media all and (max-width:1043px){
     .clavier{
         white-space: wrap;
@@ -17,6 +21,9 @@
 @media all and (max-width:780px){
     .menu{
         margin-right:0px;
+    }
+    .top{
+        width: 98%;
     }
 }
 @media all and (max-width:655px){
@@ -38,11 +45,14 @@
         width: 30px;
         height: 40px;
     }
-
-}
-@media all and (max-width:450px){
-    .clavier{
-        margin-left:120px;
+    .top{
+        width: 96.5%;
     }
-        
+}
+@media all and (max-width:412px){
+    .clavier button{
+        font-size: 16px;
+        width: 28px;
+        height: 30px;
+    }       
 }

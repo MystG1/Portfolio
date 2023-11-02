@@ -82,11 +82,19 @@ function start() {
                     } else {
                         alert("C'est faux, +1 erreur");
                         penduPlusUn();
+
+                        if (erreur === 7) {
+                            $(".clavier, .deviner, .mute, .demute").css("display", "none");
+                            $(".rejouer").css("display", "flex");
+                            $(".leMot").text("Tu as perdu ! Le mot était '" + motSansAccents + "'");
+                            $("header").css("background-color", "brown");
+                            audioMain.pause();
+                            $(".main").html("<audio class=main src=sons/death.mp3 autoplay></audio>");
+                        }
                     }
                 }, 350);
-
             });
-
+            
             let boutonsClavier = document.querySelectorAll('.clavier button');
 
             boutonsClavier.forEach(function (bouton) {
