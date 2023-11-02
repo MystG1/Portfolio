@@ -40,9 +40,9 @@
     }
 
 }
-@media all and (max-width:400px){
+@media all and (max-width:450px){
     .clavier{
-        margin-left:80px;
+        margin-left:120px;
     }
         
 }

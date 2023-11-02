@@ -1,23 +1,57 @@
-// Fonction qui enlève les accents du (mot)
+// Déclarer les fonctions et variables-----------------------------------------------
 function enleverAccents(mot) {
     return mot.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
+function mute() {
+    if (audioMain.paused) {
+        audioMain.play();
+        $(".mute").text("Couper la musique");
+    } else {
+        audioMain.pause();
+        $(".mute").text("Activer la musique");
+    }
+}
+function win() {
+    audioMain.pause();
+    $(".clavier, .deviner, .mute, .demute").css("display", "none");
+    $(".main").html("<audio class=main src=sons/victory.mp3 autoplay></audio>");
+    $("header").css("background-color", "green");
+    $(".rejouer").css("display", "flex");
+    $(".maj").attr('src','images/error/victory.png');
+}
+function penduPlusUn() {
+    erreur++;
+    $(".pendu").text(erreur + "/7");
+    let cheminImage = 'images/error/error' + erreur + '.png';
+    $(".maj").attr('src', cheminImage);
+    $(".outch").html("<audio class='click' src='sons/outch.mp3' autoplay></audio>");
+}
 
+let audioMain = $(".main")[0];
+let audioClick = $(".click")[0];
+let erreur = 0;
+
+// Les boutons------------------------------------------------------------------------
 $(".start").on("click", () => {
-    $(".click").html("<audio class=click src=sons/click.mp3 autoplay></audio>");
+    audioClick.play();
+    $(".pendu").text(erreur + "/7");
     $(".start").css("display", "none");
     $(".container").fadeIn();
     $(".container").css("display", "block");
     start();
 });
-
-
 $(".rejouer").on("click", () => {
-    $(".click").html("<audio class='click' src='sons/click.mp3' autoplay></audio>");
+    audioClick.play();
     setTimeout(() => {
         location.reload();
     }, 350);
 });
+
+$(".mute").on("click", () => {
+    mute();
+});
+
+// -----------------------------------------------------------------------------------
 
 // Requête AJAX
 const url = "https://trouve-mot.fr/api/random";
@@ -28,121 +62,65 @@ function start() {
         type: "GET",
         dataType: "json",
         success: (data) => {
-            // Transforme le mot généré en mot sans accent 
             let motSansAccents = enleverAccents(data[0].name);
-
-            // génère un tableau avec un caractère "_" pour chaque lettre du mot précédent
             let leMotCacher = Array(motSansAccents.length).fill('_');
-
-            // Transforme le tableau en une chaine de caractère avec un espace entre chaque valeurs "_ _ _ _ _" 
             let afficherLeMotCacher = leMotCacher.join("");
-
-            // Affiche la chaine de caractère "_ _ _ _" sur le site
             $(".leMot").text(afficherLeMotCacher);
 
-            // Variable "erreur" qui déterminera quand est-ce que le joueur perd
-
-            let erreur = 0;
-            let audioMain = document.querySelector(".main");
-            
-            $(".pendu").text(erreur + "/7");
-
             $(".deviner").on("click", () => {
-                $(".click").html("<audio class='click' src='sons/click.mp3' autoplay></audio>");
+                audioClick.play();
                 setTimeout(() => {
                     mot = prompt("Quel est le mot selon toi? ");
+
                     if (mot === null) {
-                        return; // Ne fait rien si l'utilisateur a annulé
+                        return;
                     }
                     if (mot === motSansAccents) {
-                        audioMain.pause();
-                        $(".main").html("<audio class=main src=sons/victory.mp3 autoplay></audio>");
-                        $("header").css("background-color", "green");
-                        $(".clavier").css("display", "none");
-                        $(".rejouer").css("display", "flex");
-                        $(".deviner").css("display", "none");
+                        win();
                         $(".leMot").text("Tu as gagné ! Le mot était '" + motSansAccents + "'");
 
                     } else {
                         alert("C'est faux, +1 erreur");
-                        // On rajoute 1 au compteur d'erreur
-                        erreur++;
-                        $(".pendu").text(erreur + "/7");
-                        // On charge l'image correspond au nombre d'erreur (1 erreur = 1 morceau du pendu)
-                        let cheminImage = 'images/error/error' + erreur + '.png';
-                        $(".maj").attr('src', cheminImage);
-                        $(".outch").html("<audio class='click' src='sons/outch.mp3' autoplay></audio>");
+                        penduPlusUn();
                     }
                 }, 350);
 
             });
 
-
-            // On stock toutes les touches du clavier dans une variable "boutonsClaviers"
             let boutonsClavier = document.querySelectorAll('.clavier button');
 
-            // Pour chaque boutons présent dans la variable :
             boutonsClavier.forEach(function (bouton) {
-
-                // On ajoute un évènement "click" qui va stocker dans une variable "guess" la valeur de la touche appuyé en MINUSCULE.
                 bouton.addEventListener("click", function () {
-                    $(".click").html("<audio class='click' src='sons/click.mp3' autoplay></audio>");
+
+                    audioClick.play();
                     let guess = bouton.textContent.toLowerCase();
                     bouton.style.opacity = 0;
                     bouton.disabled = true;
 
-
-                    // Si le mot a deviner contient la valeur de la variable "Guess"
                     if (motSansAccents.includes(guess)) {
 
-                        // On crée une boucle qui va parcourir chaque caractère de notre motSansAccents 
                         for (let i = 0; i < motSansAccents.length; i++) {
-
-                            // Si le caracètre a la position [i] correspond a la valeur et au type de notre variable "Guess"
                             if (motSansAccents[i] === guess) {
-
-                                // on remplace la valeur "_" du caractère a la position [i] de leMotCacher par la valeur de "Guess"
                                 leMotCacher[i] = guess;
-
                             }
                         }
-                        // Si la lettre selectionnée n'est pas présente dans le mot a deviner 
-                    } else {
-                        // On rajoute 1 au compteur d'erreur
-                        erreur++;
-                        $(".pendu").text(erreur + "/7");
-                        // On charge l'image correspond au nombre d'erreur (1 erreur = 1 morceau du pendu)
-                        let cheminImage = 'images/error/error' + erreur + '.png';
-                        $(".maj").attr('src', cheminImage);
-                        
-                        $(".outch").html("<audio class='click' src='sons/outch.mp3' autoplay></audio>");
-
                     }
-
-
-                    // On actualise le mot cacher pour que les lettres découverte apparraissent
+                     else {
+                        penduPlusUn();
+                    }
                     $(".leMot").text(leMotCacher.join(""));
 
-                    // Si le compteur d'erreur atteint 7
                     if (erreur === 7) {
-                        $(".clavier").css("display", "none");
+                        $(".clavier, .deviner, .mute, .demute").css("display", "none");
                         $(".rejouer").css("display", "flex");
                         $(".leMot").text("Tu as perdu ! Le mot était '" + motSansAccents + "'");
                         $("header").css("background-color", "brown");
-                        $(".deviner").css("display", "none");
                         audioMain.pause();
                         $(".main").html("<audio class=main src=sons/death.mp3 autoplay></audio>");
                     }
-
-                    // Si le tableau leMotCacher, une fois convertis en chaine de caractère, est égal au mot sans accents
                     if (leMotCacher.join("") === motSansAccents) {
-                        audioMain.pause();
-                        $(".main").html("<audio class=main src=sons/victory.mp3 autoplay></audio>");
-                        $("header").css("background-color", "green");
-                        $(".clavier").css("display", "none");
-                        $(".rejouer").css("display", "flex");
+                        win();
                         $(".leMot").text("Tu as gagné ! Le mot était '" + motSansAccents + "'");
-
                     }
                 });
             });

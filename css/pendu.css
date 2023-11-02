@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 body{
-    min-width: 336px;
+    min-width: 375px;
 }
 .container {
     display: none;
@@ -23,8 +23,23 @@ body{
     border-radius: 20px;
 }
 
-.start:hover,
-.rejouer:hover {
+.mute, .demute{
+    margin-left: auto;
+    margin-right: 7px;
+    padding: 5px 15px;
+    font-family: Amatic SC;
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid #160f0a;
+    border-radius: 10px;
+}
+.mute:hover, .demute:hover{
+    transition: 0.3s;
+    background-color: brown;
+    box-shadow: inset 0px 0px 20px black;
+    font-size: 27px;
+}
+.start:hover, .rejouer:hover {
     transition: 0.3s;
     background-color: brown;
     box-shadow: inset 0px 0px 20px black;
