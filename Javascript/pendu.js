@@ -14,9 +14,13 @@ function mute() {
 function win() {
     audioMain.pause();
     $(".clavier, .deviner, .mute, .demute").css("display", "none");
+    $("header h1").css("flex-grow","1");
     $(".main").html("<audio class=main src=sons/victory.mp3 autoplay></audio>");
     $("header").css("background-color", "green");
     $(".rejouer").css("display", "flex");
+    serie++;
+    $(".series").text(serie);
+    localStorage.setItem("serie", serie);
     $(".maj").attr('src','images/error/victory.png');
 }
 function penduPlusUn() {
@@ -31,6 +35,16 @@ let audioMain = $(".main")[0];
 let audioClick = $(".click")[0];
 let erreur = 0;
 
+let choixMusique = localStorage.getItem("switch");
+if (choixMusique === null) {
+    choixMusique = "0";
+}
+
+let serie = localStorage.getItem("serie");
+if (serie === null) {
+    serie = 0;
+}
+$(".series").text(serie);
 // Les boutons------------------------------------------------------------------------
 $(".start").on("click", () => {
     audioClick.play();
@@ -86,8 +100,11 @@ function start() {
                         if (erreur === 7) {
                             $(".clavier, .deviner, .mute, .demute").css("display", "none");
                             $(".rejouer").css("display", "flex");
+                            $("header h1").css("flex-grow","1");
                             $(".leMot").text("Tu as perdu ! Le mot était '" + motSansAccents + "'");
                             $("header").css("background-color", "brown");
+                            serie=0;
+                            localStorage.setItem("serie", serie);
                             audioMain.pause();
                             $(".main").html("<audio class=main src=sons/death.mp3 autoplay></audio>");
                         }
@@ -120,9 +137,12 @@ function start() {
 
                     if (erreur === 7) {
                         $(".clavier, .deviner, .mute, .demute").css("display", "none");
+                        $("header h1").css("flex-grow","1");
                         $(".rejouer").css("display", "flex");
                         $(".leMot").text("Tu as perdu ! Le mot était '" + motSansAccents + "'");
                         $("header").css("background-color", "brown");
+                        serie=0;
+                        localStorage.setItem("serie", serie);
                         audioMain.pause();
                         $(".main").html("<audio class=main src=sons/death.mp3 autoplay></audio>");
                     }

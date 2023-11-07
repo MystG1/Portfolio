@@ -9,8 +9,7 @@ body{
     padding-right: 15px;
     text-align: center;
 }
-
-/* "Appuyez ici pour commencer le jeux" "Appuyez ici pour rejouer */
+/* Les bouttons */
 .start, .rejouer {
     text-align: center;
     margin-top: 20%;
@@ -25,7 +24,6 @@ body{
 
 .mute, .demute{
     padding: 5px 15px;
-    font-family: Amatic SC;
     font-size: 20px;
     font-weight: bold;
     border: 3px solid #160f0a;
@@ -63,8 +61,7 @@ body{
     margin-right: -29px;
 }
 
-.menu {
-    font-family: Amatic SC;
+.menu, .seriesText {
     font-size: 30px;
     text-decoration: none;
     padding: 1px 16px;
@@ -73,6 +70,11 @@ body{
     border-radius: 20px;
     color: black;
     background-color: brown;
+}
+
+.seriesText{
+    background-color: green;
+    font-size:25px;
 }
 
 /* html */
@@ -92,6 +94,12 @@ body {
     width: 1463px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    font-family: Amatic SC;
+    font-size: 20px;
+    font-weight: bold;
+    margin: -24px;
+
     
 }
 header {
@@ -109,21 +117,14 @@ header p {
     padding-right: 8px;
     margin-left: -10px;
     margin-bottom: 3px;
-    font-size: 20px;
     font-family: Amatic SC;
     font-weight: bolder;
     font-size: 30px;
 }
 
-/* Bouton "tu a deviné le mot ?" */
-.guessed {
-    margin-left: 10px;
-    margin-right: -10px;
-}
-
 /* "Mot a deviner */
 header h1 {
-    flex-grow: 1;
+    flex-grow: 0.86;
     font-family: Amatic SC;
     letter-spacing: 5px;
     font-size: 50px;

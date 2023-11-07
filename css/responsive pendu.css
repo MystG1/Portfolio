@@ -1,0 +1,48 @@
+
+@media all and (max-width:1043px){
+    .clavier{
+        white-space: wrap;
+    }
+    .clavier button {
+        margin: 3px;
+    }
+}
+@media all and (max-width:960px){
+    .clavier button {
+        
+        width: 50px;
+        height: 60px;
+    }
+}
+@media all and (max-width:780px){
+    .menu{
+        margin-right:0px;
+    }
+}
+@media all and (max-width:655px){
+    .clavier button{
+        font-size: 30px;
+        width: 40px;
+        height: 50px;
+    }
+    header h1{
+        padding: 17px;
+    } 
+    .start{
+        margin:50% 0;
+    }
+}
+@media all and (max-width:560px){
+    .clavier button{
+        font-size: 20px;
+        width: 30px;
+        height: 40px;
+    }
+
+}
+@media all and (max-width:450px){
+    .clavier{
+        margin-left:120px;
+    }
+        
+}
