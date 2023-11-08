@@ -67,6 +67,12 @@
         font-size: 12px;
         margin-right: 12px;
     }
+    .top{
+        margin-bottom: 50px;
+    }
+    .clavier{
+        margin-top: 80px;
+    }
 }
 @media all and (max-width:412px){
     .clavier button{
