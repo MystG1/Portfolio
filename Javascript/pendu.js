@@ -44,14 +44,17 @@ let serie = localStorage.getItem("serie");
 if (serie === null) {
     serie = 0;
 }
+
 $(".series").text(serie);
 // Les boutons------------------------------------------------------------------------
+
 $(".start").on("click", () => {
     audioClick.play();
     $(".pendu").text(erreur + "/7");
     $(".start").css("display", "none");
     $(".container").fadeIn();
     $(".container").css("display", "block");
+    sessionStorage.setItem("relancer", "1");
     start();
 });
 $(".rejouer").on("click", () => {
@@ -113,7 +116,6 @@ function start() {
             });
             
             let boutonsClavier = document.querySelectorAll('.clavier button');
-
             boutonsClavier.forEach(function (bouton) {
                 bouton.addEventListener("click", function () {
 
@@ -146,6 +148,7 @@ function start() {
                         audioMain.pause();
                         $(".main").html("<audio class=main src=sons/death.mp3 autoplay></audio>");
                     }
+
                     if (leMotCacher.join("") === motSansAccents) {
                         win();
                         $(".leMot").text("Tu as gagné ! Le mot était '" + motSansAccents + "'");
@@ -157,6 +160,17 @@ function start() {
             alert("Un problème est survenu");
         }
     });
+}
+
+let relancer = sessionStorage.getItem("relancer");
+if (relancer === "1") {
+    $(".pendu").text(erreur + "/7");
+    $(".start").css("display", "none");
+    $(".container").fadeIn();
+    $(".container").css("display", "block");
+    relancer="1";
+    sessionStorage.setItem("relancer", relancer);
+    start();
 }
 // ---------------------------------------------------------------------------------
 
