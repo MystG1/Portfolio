@@ -14,19 +14,24 @@
 @media all and (max-width:960px){
     .clavier button {
         
-        width: 50px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
     }
 }
-@media all and (max-width:780px){
+@media all and (max-width:810px){
     .menu{
         margin-right:0px;
     }
     .top{
         width: 98%;
     }
+    .clavier button {
+        
+        width: 60px;
+        height: 60px;
+    }
 }
-@media all and (max-width:655px){
+@media all and (max-width:712px){
     .top {
         padding: 6px;
     }
@@ -36,8 +41,8 @@
     
     .clavier button{
         font-size: 30px;
-        width: 40px;
-        height: 50px;
+        width: 55px;
+        height: 55px;
     }
     .start{
         margin:50% 0;
@@ -49,35 +54,39 @@
         margin-right: 60px;
     }
 }
-@media all and (max-width:560px){
+@media all and (max-width:660px){
     .clavier button{
-        font-size: 20px;
-        width: 30px;
-        height: 40px;
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
     }
     .top{
         width: 96.5%;
-    }
+    }}
+    @media all and (max-width:610px){
+        .clavier button{
+            font-size: 25px;
+            width: 35px;
+            height: 45px;
+        }
+        .top{
+            width: 96.5%;
+        }    
 }
 @media all and (max-width:460px){
     header p{
-        margin-left: -100px;
+        margin-left: -40px;
+    }
+    .clavier{
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .clavier button{
+        font-size: 30px;
+        width: 60px;
+        height: 60px;
     }
     .deviner{
         font-size: 12px;
-        margin-right: 12px;
     }
-    .top{
-        margin-bottom: 50px;
-    }
-    .clavier{
-        margin-top: 80px;
-    }
-}
-@media all and (max-width:412px){
-    .clavier button{
-        font-size: 16px;
-        width: 28px;
-        height: 30px;
-    }       
+    
 }

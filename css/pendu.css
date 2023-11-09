@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
-body{
-    min-width: 375px;
-}
 .container {
     display: none;
     width: auto;
@@ -78,10 +75,15 @@ html {
 }
 
 body {
+    margin: 5px 0px;
+    height: 100vh;
     display: flex;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    min-width: 375px;
 }
+
 .top{
     width: 1463px;
     display: flex;

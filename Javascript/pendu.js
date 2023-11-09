@@ -105,6 +105,7 @@ function start() {
                             $(".rejouer").css("display", "flex");
                             $("header h1").css("flex-grow","1");
                             $(".leMot").text("Tu as perdu ! Le mot était '" + motSansAccents + "'");
+                            $(".leMot").css("padding-left","220px");
                             $("header").css("background-color", "brown");
                             serie=0;
                             localStorage.setItem("serie", serie);
@@ -142,6 +143,7 @@ function start() {
                         $("header h1").css("flex-grow","1");
                         $(".rejouer").css("display", "flex");
                         $(".leMot").text("Tu as perdu ! Le mot était '" + motSansAccents + "'");
+                        $(".leMot").css("padding-left","220px");
                         $("header").css("background-color", "brown");
                         serie=0;
                         localStorage.setItem("serie", serie);
@@ -152,6 +154,7 @@ function start() {
                     if (leMotCacher.join("") === motSansAccents) {
                         win();
                         $(".leMot").text("Tu as gagné ! Le mot était '" + motSansAccents + "'");
+                        $(".leMot").css("padding-left","220px");
                     }
                 });
             });
