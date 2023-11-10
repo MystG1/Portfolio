@@ -18,29 +18,33 @@
 <body>
     <audio class="main" src="sons/main.mp3" autoplay loop preload="auto"></audio>
     <audio class="click" src="sons/click.mp3" preload="auto"></audio>
-    <div class="top">
-    <a class="menu" href="index.html">Menu</a>
-    <p class="seriesText">série de victoire : <b class="series"></b> </p>
-    <div class="mute">couper la musique</div>
-    </div>
-    <div class="outch"></div>
-    <div class="start">Appuyez ici pour commencer le jeu</div>
-    <div class="mainScreen">
+    <audio class="outch" src="sons/outch.mp3" preload="auto"></audio>
+
     <div class="container">
-        
-        <header>
-            <button class="deviner">tu a deviné le mot ? </button>
-            <h1 class="leMot">Mot a deviner</h1>
-            <p>pendu : <b class="pendu"></b> </p>
-        </header>
-        
-        <div class="imageCentrale">
-            <img class="maj" src="images/error/error0.png" alt="le pendu">
+        <div class="top">
+            <a class="menu" href="index.html">Menu</a>
+            <p class="seriesText">série de victoire : <b class="series"></b> </p>
+            <div class="mute">musique : on</div>
         </div>
     </div>
 
+    <div class="start">Appuyez ici pour commencer le jeu</div>
+
+    <div class="hide">
+        <div class="container">
+            <header>
+                <button class="deviner">tu a <br> deviné le <br>mot ? </button>
+                <h1 class="leMot">Mot a deviner</h1>
+                <p>pendu : <b class="pendu"></b> </p>
+            </header>
+        </div>
+
+        <div class="container">
+            <div class="imageCentrale">
+                <img class="maj" src="images/error/error0.png" alt="le pendu">
+            </div>
+        </div>
     </div>
-    <div class="container">
         <div class="clavier">
             <button class="a">A</button>
             <button class="z">Z</button>
@@ -69,8 +73,7 @@
             <button class="b">B</button>
             <button class="n">N</button>
         </div>
-            <button class="rejouer">Appuyez içi pour rejouer</button>
-    </div>
+    <button class="rejouer">Appuyez içi pour rejouer</button>
     <script src="Javascript/pendu.js"></script>
 </body>
 

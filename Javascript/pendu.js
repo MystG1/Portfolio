@@ -5,10 +5,10 @@ function enleverAccents(mot) {
 function mute() {
     if (audioMain.paused) {
         audioMain.play();
-        $(".mute").text("Couper la musique");
+        $(".mute").text("musique : on");
     } else {
         audioMain.pause();
-        $(".mute").text("Activer la musique");
+        $(".mute").text("musique : off");
     }
 }
 function win() {
@@ -26,21 +26,17 @@ function win() {
 
 }
 function penduPlusUn() {
+    audioOutch.play();
     erreur++;
     $(".pendu").text(erreur + "/7");
     let cheminImage = 'images/error/error' + erreur + '.png';
     $(".maj").attr('src', cheminImage);
-    $(".outch").html("<audio class='click' src='sons/outch.mp3' autoplay></audio>");
 }
 
 let audioMain = $(".main")[0];
+let audioOutch= $(".outch")[0];
 let audioClick = $(".click")[0];
 let erreur = 0;
-
-let choixMusique = localStorage.getItem("switch");
-if (choixMusique === null) {
-    choixMusique = "0";
-}
 
 let serie = localStorage.getItem("serie");
 if (serie === null) {
@@ -54,8 +50,10 @@ $(".start").on("click", () => {
     audioClick.play();
     $(".pendu").text(erreur + "/7");
     $(".start").css("display", "none");
-    $(".container").fadeIn();
-    $(".container").css("display", "block");
+    $(".hide").fadeIn();
+    $(".clavier").fadeIn();
+    $(".hide").css("display","block");
+    $(".clavier").css("display", "grid");
     sessionStorage.setItem("relancer", "1");
     start();
 });
@@ -107,7 +105,6 @@ function start() {
                             $(".rejouer").css("display", "flex");
                             $(".leMot").text("perdu ! Le mot était '" + motSansAccents + "'");
                             $("header p").css("display","none");
-                            $("header h1").css("padding-right","0");
                             $("header").css("background-color", "brown");
                             serie=0;
                             localStorage.setItem("serie", serie);
@@ -170,8 +167,10 @@ let relancer = sessionStorage.getItem("relancer");
 if (relancer === "1") {
     $(".pendu").text(erreur + "/7");
     $(".start").css("display", "none");
-    $(".container").fadeIn();
-    $(".container").css("display", "block");
+    $(".hide").fadeIn();
+    $(".clavier").fadeIn();
+    $(".hide").css("display","block");
+    $(".clavier").css("display", "grid");
     relancer="1";
     sessionStorage.setItem("relancer", relancer);
     start();
