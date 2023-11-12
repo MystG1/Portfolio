@@ -6,7 +6,7 @@ function enleverAccents(mot) {
 function win() {
     audioMain.pause();
     $(".clavier, .deviner, .mute, .demute").css("display", "none");
-    $(".main").html("<audio class=main src=sons/victory.mp3 autoplay></audio>");
+    $(".main").html("<audio class=main src=sons/victory.mp3 autoplay type=audio/mp3></audio>");
     $("header p").css("display", "none");
     $("header h1").css("padding-right", "0");
     $("header").css("background-color", "green");
@@ -116,7 +116,7 @@ function start() {
                             serie = 0;
                             localStorage.setItem("serie", serie);
                             audioMain.pause();
-                            $(".main").html("<audio class=main src=sons/death.mp3 autoplay></audio>");
+                            $(".main").html("<audio class=main src=sons/death.mp3 autoplay type=audio/mp3></audio>");
                         }
                     }
                 }, 350);
@@ -154,7 +154,7 @@ function start() {
                         serie = 0;
                         localStorage.setItem("serie", serie);
                         audioMain.pause();
-                        $(".main").html("<audio class=main src=sons/death.mp3 autoplay></audio>");
+                        $(".main").html("<audio class=main src=sons/death.mp3 autoplay type=audio/mp3></audio>");
                     }
 
                     if (leMotCacher.join("") === motSansAccents) {
