@@ -2,27 +2,19 @@
 function enleverAccents(mot) {
     return mot.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
-function mute() {
-    if (audioMain.paused) {
-        audioMain.play();
-        $(".mute").text("musique : on");
-    } else {
-        audioMain.pause();
-        $(".mute").text("musique : off");
-    }
-}
+
 function win() {
     audioMain.pause();
     $(".clavier, .deviner, .mute, .demute").css("display", "none");
     $(".main").html("<audio class=main src=sons/victory.mp3 autoplay></audio>");
-    $("header p").css("display","none");
-    $("header h1").css("padding-right","0");
+    $("header p").css("display", "none");
+    $("header h1").css("padding-right", "0");
     $("header").css("background-color", "green");
     $(".rejouer").css("display", "flex");
     serie++;
     $(".series").text(serie);
     localStorage.setItem("serie", serie);
-    $(".maj").attr('src','images/error/victory.png');
+    $(".maj").attr('src', 'images/error/victory.png');
 
 }
 function penduPlusUn() {
@@ -33,8 +25,10 @@ function penduPlusUn() {
     $(".maj").attr('src', cheminImage);
 }
 
+
+let choixMute = localStorage.getItem("choixMute");
 let audioMain = $(".main")[0];
-let audioOutch= $(".outch")[0];
+let audioOutch = $(".outch")[0];
 let audioClick = $(".click")[0];
 let erreur = 0;
 
@@ -52,7 +46,7 @@ $(".start").on("click", () => {
     $(".start").css("display", "none");
     $(".hide").fadeIn();
     $(".clavier").fadeIn();
-    $(".hide").css("display","block");
+    $(".hide").css("display", "block");
     $(".clavier").css("display", "grid");
     sessionStorage.setItem("relancer", "1");
     start();
@@ -65,8 +59,21 @@ $(".rejouer").on("click", () => {
 });
 
 $(".mute").on("click", () => {
-    mute();
+    if (audioMain.paused) {
+        audioMain.play();
+        $(".mute").text("musique : on");
+        localStorage.setItem("choixMute", "0");
+    } else {
+        audioMain.pause();
+        $(".mute").text("musique : off");
+        localStorage.setItem("choixMute", "1");
+    }
 });
+
+if (choixMute === "1") {
+    audioMain.pause();
+    $(".mute").text("musique : off");
+}
 
 // -----------------------------------------------------------------------------------
 
@@ -104,9 +111,9 @@ function start() {
                             $(".clavier, .deviner, .mute, .demute").css("display", "none");
                             $(".rejouer").css("display", "flex");
                             $(".leMot").text("perdu ! Le mot était '" + motSansAccents + "'");
-                            $("header p").css("display","none");
+                            $("header p").css("display", "none");
                             $("header").css("background-color", "brown");
-                            serie=0;
+                            serie = 0;
                             localStorage.setItem("serie", serie);
                             audioMain.pause();
                             $(".main").html("<audio class=main src=sons/death.mp3 autoplay></audio>");
@@ -114,7 +121,7 @@ function start() {
                     }
                 }, 350);
             });
-            
+
             let boutonsClavier = document.querySelectorAll('.clavier button');
             boutonsClavier.forEach(function (bouton) {
                 bouton.addEventListener("click", function () {
@@ -132,7 +139,7 @@ function start() {
                             }
                         }
                     }
-                     else {
+                    else {
                         penduPlusUn();
                     }
                     $(".leMot").text(leMotCacher.join(""));
@@ -141,10 +148,10 @@ function start() {
                         $(".clavier, .deviner, .mute, .demute").css("display", "none");
                         $(".rejouer").css("display", "flex");
                         $(".leMot").text("Perdu ! Le mot était '" + motSansAccents + "'");
-                        $("header p").css("display","none");
-                        $("header h1").css("padding-right","0");
+                        $("header p").css("display", "none");
+                        $("header h1").css("padding-right", "0");
                         $("header").css("background-color", "brown");
-                        serie=0;
+                        serie = 0;
                         localStorage.setItem("serie", serie);
                         audioMain.pause();
                         $(".main").html("<audio class=main src=sons/death.mp3 autoplay></audio>");
@@ -169,9 +176,9 @@ if (relancer === "1") {
     $(".start").css("display", "none");
     $(".hide").fadeIn();
     $(".clavier").fadeIn();
-    $(".hide").css("display","block");
+    $(".hide").css("display", "block");
     $(".clavier").css("display", "grid");
-    relancer="1";
+    relancer = "1";
     sessionStorage.setItem("relancer", relancer);
     start();
 }
