@@ -3,13 +3,13 @@
         width: auto;
     }
 
-    .creation nav {
+    .nav {
         grid-template-columns: repeat(2, 1fr);
     }
     }
 
     @media all and (max-width:1132px) {
-        .creation nav {
+        .nav{
             grid-template-columns: repeat(1, 1fr);
         }
         .main-index{
@@ -34,24 +34,15 @@
     }
     @media all and (max-width:600px){
         .formulaire{
-            
             width: auto;
         }
         .background{
             background-image: url(../images/contact-fond.png);
             background-size: cover;
-        }
-        .background2{
-            background-image: url(../images/citations.fond.png);
-            background-size: cover;
-        }
-        .background3{
-            background-image: url(../images/justePrix.fond.png);
-            background-size: cover;
-        }
     }
+}
     @media all and (max-width:540px){
-        .creation a{
+        .creation button{
             width: 300px;
         }
         header h1{
@@ -62,13 +53,5 @@
             width: 100%;
             justify-content: space-between;
         }
-        .citations{
-            width: auto;
-        }
-        .justePrix{
-            width: auto;
-        }
-        .justePrix input{
-            width: auto;
-        }
+
     }

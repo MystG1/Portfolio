@@ -78,6 +78,7 @@ header a:nth-of-type(2):hover{
     background-color: white;
     padding: 0px 10px;
 }
+
 .creation h1{
     margin-bottom: auto;
     font-size: 30px;
@@ -88,7 +89,7 @@ header a:nth-of-type(2):hover{
     font-family: Inter;
     font-weight: bold;
 }
-.creation nav{
+.nav{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -97,7 +98,7 @@ header a:nth-of-type(2):hover{
     row-gap: 25px;
     padding-bottom: 30px;
 }
-.creation a {
+.creation button {
     text-decoration: none;
     text-align: left;
     font-family: Inter;
@@ -110,19 +111,19 @@ header a:nth-of-type(2):hover{
     color: whitesmoke;
     text-shadow: 1px 2px 6px black ;
 }
-.creation a:nth-of-type(1){
-    background-image: url(../images/portfolio-mini.png);
+.b1{
+    background-image: url(../images/bFond1.png);
 }
-.creation a:nth-of-type(2){
-    background-image: url(../images/mega-pop.png);
+.b2{
+    background-image: url(../images/bFond2.png);
 }
-.creation a:nth-of-type(3){
-    background-image: url(../images/pac-man.png);
+.b3{
+    background-image: url(../images/bFond3.png);
 }
-.creation a:nth-of-type(4){
-    background-image: url(../images/rodeo-pump.png);
+.b4{
+    background-image: url(../images/bFond4.png);
 }
-.creation a:hover{
+.creation button:hover{
     margin : -30px 0;
     transition: 0.15s;
     box-shadow: inset 0px 0px 3px 2px black;
@@ -220,120 +221,3 @@ footer{
     margin-top: 22px;
 }
 /* Fin contact.html */
-
-.background2{
-    background-image: url(../images/citations.background.png);
-    background-size: cover;
-    flex-grow: 1;
-}
-.citations {
-    background-color: rgba(0, 0, 0, 0.6);
-    margin-left: auto;
-    margin-right: auto;
-    width: 400px;
-    height: auto;
-    text-align: center;
-    border: 3px solid rgb(104, 79, 16);
-    border-radius: 10px;
-    font-family:Noto Sans NKo Unjoined;
-    display: flex;
-    flex-direction: column;
-    padding: 15px 50px;
-    
-}
-.citations p{
-    border: 3px solid rgb(104,79,16);
-    flex-grow: 1;
-    border-radius: 8px;
-    white-space: normal;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-.citations h2{
-    margin: auto;
-}
-.citations button{
-    background-color: black;
-    color: white;
-    width: 120px;
-    height: 50px;
-    margin-left: auto;
-    margin-top: 20px;
-    margin-right: auto;
-    border: 2px solid rgb(104,79,16);
-    border-radius: 5px;
-    font-family: Inter;
-    font-weight: bolder;
-}
-.citations button:hover{
-    transition: 0.1s;
-    width: 115px;
-    height: 45px;
-    font-size: -2px;
-    margin-top: 22px;
-}
-/* Fin citations.html */
-.background3{
-    background-image: url(../images/justePrix.background.png);
-    background-size: cover;
-    flex-grow: 1;
-}
-.justePrix {
-    background-color: rgba(0, 0, 0, 0.6);
-    margin-left: auto;
-    margin-right: auto;
-    width: 400px;
-    height: auto;
-    text-align: center;
-    border: 3px solid rgb(104, 79, 16);
-    border-radius: 10px;
-    font-family:Noto Sans NKo Unjoined;
-    display: flex;
-    flex-direction: column;
-    padding: 15px 50px;
-}
-.justePrix input{
-    border: 2px solid rgb(104, 79, 16);
-    border-radius:5px;
-    padding: 10px;
-    width: 350px;
-    font-size: 20px;
-}
-
-.justePrix button{
-    background-color: black;
-    color: white;
-    width: 120px;
-    height: 50px;
-    margin-left: auto;
-    margin-top: 20px;
-    margin-right: auto;
-    border: 2px solid rgb(104,79,16);
-    border-radius: 5px;
-    font-family: Inter;
-    font-weight: bolder;
-}
-.justePrix button:hover{
-    transition: 0.1s;
-    width: 115px;
-    height: 45px;
-    font-size: -2px;
-    margin-top: 22px;
-}
-.instruction {
-    padding: 15px;
-    margin: 10px 0;
-  }
-  
-  .plus {
-    background-color: #f67280;
-  }
-  
-  .moins {
-    background-color: #ffa372;
-  }
-  
-  .fini {
-    background-color : #0c9463;
-  }
-  
