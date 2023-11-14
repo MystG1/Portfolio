@@ -8,8 +8,8 @@ $(document).on("click", ".b1", () => {
 
     setTimeout(() => {
         $(".b3, .b4").remove();
-        $(".b1").addClass("bBack").removeClass("game");
-        $(".b2").addClass("bPendu").removeClass("portfolio");
+        $(".b1").addClass("bBack").removeClass("b1");
+        $(".b2").addClass("bPendu").removeClass("b2");
         $(".bBack").text("Retour");
         $(".bBack").css("background-image", "none");
         $(".bBack").css("background-color", "black");
